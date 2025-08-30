@@ -1,0 +1,64 @@
+{
+  "id": "_example-observation",
+  "traceId": "_example-trace-id",
+  "type": "GENERATION",
+  "name": "AzureChatOpenAI",
+  "startTime": "2025-08-19 09:01:50.097000+00:00",
+  "endTime": "2025-08-19 09:02:03.018000+00:00",
+  "model": "gpt-4o-mini-2024-07-18",
+  "modelParameters": {},
+  "input": [
+    {
+      "role": "system",
+      "content": "You are tasked with performing a contextual compression of a document as part of a system that processes multiple documents. Your goal is to extract only the essential parts of the given context that are relevant to a specific query.\nThis process helps in focusing on the most important information and reducing noise in the context.\nThe query might refer to multiple documents, consider how does apply to a single document in the context as multiple documents might be relevant.\n\nYour task is to extract any parts of the context that are directly relevant to answering this question. Follow these guidelines:\n\n1. Only extract text *AS IS* that is directly related to the query.\n2. Do not modify, paraphrase, or summarize the extracted text. Copy it exactly as it appears in the context.\n3. You may extract multiple separate parts if necessary.\n4. If a header relates to the query, extract also the text under that section.\n5. Preserve headings and subheadings when extracting.\n6. If you find no relevant information in the context, output \"NO_OUTPUT\".\n\nHere is the context document:\n\n<context>[MARKDOWN_CONTENT]</context>\n\n"
+    },
+    {
+      "role": "user",
+      "content": "Now, consider the following query:\n\n<query>[EXAMPLE_QUERY]</query>\n\nNow, proceed with the task using the provided context and query.\n"
+    }
+  ],
+  "metadata": {
+    "thread_id": "_example-thread-id",
+    "ls_provider": "azure",
+    "checkpoint_ns": "research_graph:_example-checkpoint-ns",
+    "ls_model_name": "gpt-4o-mini",
+    "ls_model_type": "chat",
+    "langgraph_node": "search_documents",
+    "langgraph_path": [
+      "__pregel_pull",
+      "search_documents"
+    ],
+    "langgraph_step": 2,
+    "ls_temperature": null,
+    "langgraph_triggers": [
+      "branch:to:search_documents"
+    ],
+    "langgraph_checkpoint_ns": "research_graph:_example-checkpoint-ns|build_section_with_document_research:_example-build_section_with_document_research-id|search_documents:_example-search_documents-id"
+  },
+  "output": {
+    "role": "assistant",
+    "content": "NO_OUTPUT",
+    "additional_kwargs": {
+      "refusal": null
+    }
+  },
+  "usage": {
+    "input": 6795,
+    "output": 3,
+    "total": 6798,
+    "unit": null
+  },
+  "level": "DEFAULT",
+  "parentObservationId": "_example-parent-observation-id",
+  "latency": 12.921,
+  "completionTokens": 3,
+  "promptTokens": 6795,
+  "projectId": "_example-project-id",
+  "totalTokens": 6798,
+  "completionStartTime": null,
+  "version": null,
+  "statusMessage": null,
+  "promptId": null,
+  "modelId": null,
+  "unit": null
+}

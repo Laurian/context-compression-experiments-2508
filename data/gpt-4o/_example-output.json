@@ -1,0 +1,8 @@
+{
+  "observation_id": "_example-observation-id",
+  "original_output": "NO_OUTPUT",
+  "compression_successful": true,
+  "original_was_successful": false,
+  "improvement": true,
+  "output": "[EXAMPLE_OUTPUT]"
+}
