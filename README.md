@@ -43,7 +43,7 @@ I first used [DSPy](https://dspy.ai/api/optimizers/GEPA/) [GEPA (Genetic-Pareto)
 
 Running [dspy_gepa_optimizer.py](scripts/dspy_gepa_optimizer.py):
 
-```
+```md
 Running DSPy GEPA optimization...
 This will optimize the context compression prompt using genetic algorithms.
 Make sure you have configured your .env file with API keys.
@@ -89,7 +89,7 @@ These steps and considerations ensure that the information extracted is both rel
 
 It is fascinating to watch the variants it evolves:
 
-```
+```md
 2025/08/30 20:23:22 INFO dspy.teleprompt.gepa.gepa: Iteration 42: Selected program 11 score: 0.4210539502301618
 2025/08/30 20:23:42 INFO dspy.teleprompt.gepa.gepa: Iteration 42:
 
@@ -123,7 +123,7 @@ By adhering to these guidelines, ensure that your responses are accurate, releva
 
 After 1h and 75 iterations, the final result is:
 
-```
+```md
 2025/08/30 20:49:13 INFO dspy.teleprompt.gepa.gepa: Iteration 75: Selected program 4 score: 0.329291347392866
 2025/08/30 20:49:22 INFO dspy.teleprompt.gepa.gepa: Iteration 75: Proposed new text for step:
 
@@ -163,7 +163,7 @@ Running this prompt on the 296 documents with `gpt-4o-mini` extracted content in
 
 I ran the same initial prompt with [TextGrad](https://github.com/zou-group/textgrad) (again script generated with Claude Code and some minor corrections done with Cursor), and running [textgrad_optimizer.py](scripts/textgrad_optimizer.py) I got this prompt:
 
-```
+```md
 You are tasked with performing a contextual compression of a document as part of a system that processes multiple documents. Your goal is to extract only the essential parts of the given context that are relevant to a specific query. This process helps in focusing on the most important information and reducing noise in the context. The query might refer to multiple documents, consider how this applies to a single document in the context as multiple documents might be relevant.
 
 Your task is to extract any parts of the context that are directly relevant to answering this question. Follow these guidelines:
@@ -194,7 +194,7 @@ Which extracts with `gpt-4o-mini` from 79% of the 296 documents.
 
 Also running [TextGrad](https://github.com/zou-group/textgrad) on the [DSPy GEPA](https://dspy.ai/api/optimizers/GEPA/) optimised prompt yields an even smaller prompt:
 
-```
+```md
 You are tasked with performing a contextual compression of a document to extract only the essential parts relevant to a specific query. This involves sifting through a given context document, which could cover various domains such as town development, water conservation, or housing justice, and identifying pertinent sections or text that directly address the topics or keywords mentioned in the query.
 
 To execute this task:
